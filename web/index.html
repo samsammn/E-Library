@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>E-Library</title>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/1.11.8/semantic.min.css">
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+    <div class="ui centered grid padded">
+        <div class="sixteen wide column ui menu">
+            <img src="images/buku.png" alt="E-Library" width="170px" class="left floated column" style="margin-right:30px;">
+            <h1 class="left floated column ui blue header">
+                <div class="content">
+                    E-Library
+                    <div class="sub header">Tempat untuk menyimpan dan mengelola buku di internet</div>
+                </div>
+            </h1>
+        </div>
+
+        <div class="centered padded row">
+          <div class="three wide column">
+            <div class="ui vertical menu">
+                <div class="item">
+                    <div class="ui input"><input type="text" placeholder="Search..."></div>
+                </div>
+                <div class="item">
+                    <i class="home icon"></i> Home</div>
+                <a class="item" href="index.html">
+                    <i class="address book icon"></i> Data Buku
+                </a>
+                <a class="item" href="peminjaman.html">
+                    <i class="address book icon"></i> Data Peminjaman
+                </a>
+                <a class="item">
+                    <i class="address book icon"></i> Data Pengembalian
+                </a>
+            </div>              
+          </div>
+
+          <div class="twelve wide column">
+              <h3 class="ui top attached header">
+                  <a href="addBooks.html"><i class="plus square icon"></i>Data Buku</a>
+              </h3>
+              <div class="ui attached segment">
+                <table class="ui single line table">
+                    <thead>
+                    <tr>
+                        <th>No</th>
+                        <th>Gambar</th>
+                        <th>Judul Buku</th>
+                        <th>Penerbit</th>
+                        <th>Pengarang</th>
+                        <th>Tahun Terbit</th>
+                    </tr>
+                    </thead>
+                    <tbody id="data-buku">
+                    </tbody>
+                </table>
+              </div>
+          </div>
+
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://cdn.rawgit.com/mdehoog/Semantic-UI/6e6d051d47b598ebab05857545f242caf2b4b48c/dist/semantic.min.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        getAllBooks();
+    </script>
+</body>
+
+</html>
